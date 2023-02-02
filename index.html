@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="puzzle-block.js"></script>
+    <script src="puzzle-grid.js"></script>
+    <script src="triggers.js"></script>
+  </head>
+  <body style="background-color: #888;">
+    <a-scene>
+        <a-entity movement-controls="fly: true" position="0 0 0">
+            <a-entity camera position="0 1.6 0" look-controls></a-entity>
+            <a-entity cursor="rayOrigin:mouse" raycaster="objects: .puzzle-block"></a-entity>
+            <a-entity laser-controls="hand: right" raycaster="objects: .puzzle-block"></a-entity>
+        </a-entity>
+
+      <!-- Top row -->
+        <a-box position="0 0 -15" scale="20 20 1" puzzle-grid color="#000"></a-box>
+
+        <a-box class="puzzle-block" puzzle-block="position: 0 0; size: 2 4" color="#FF0"></a-box>
+        <a-box class="puzzle-block" puzzle-block="position: 2 0; size: 4 2" color="#AAA"></a-box>
+        <a-box class="puzzle-block" puzzle-block="position: 6 0; size: 7 1" color="#AAA"></a-box>
+        <a-box class="puzzle-block" puzzle-block="position: 13 0; size: 1 4" color="#F00"></a-box>
+        <a-box class="puzzle-block" puzzle-block="position: 6 1; size: 3 1" color="#111"></a-box>
+        <a-box class="puzzle-block" puzzle-block="position: 9 1; size: 4 3" color="#00F"></a-box>
+        <a-box class="puzzle-block" puzzle-block="position: 2 2; size: 4 4" color="#111"></a-box>
+        <a-box class="puzzle-block" puzzle-block="position: 6 2; size: 3 2" color="#AAA"></a-box>
+        <a-box class="puzzle-block" puzzle-block="position: 0 4; size: 2 6" color="#AAA"></a-box>
+        <a-box class="puzzle-block" puzzle-block="position: 6 4; size: 3 2" color="#AAA"></a-box>
+        <a-box class="puzzle-block" puzzle-block="position: 9 4; size: 4 2" color="#AAA"></a-box>
+        <a-box class="puzzle-block" puzzle-block="position: 2 6; size: 7 7" color="#F00"></a-box>
+        <a-box class="puzzle-block" puzzle-block="position: 9 6; size: 2 4" color="#AAA"></a-box>
+        <a-box class="puzzle-block" puzzle-block="position: 11 6; size: 2 4" color="#AAA"></a-box>
+        <a-box class="puzzle-block" puzzle-block="position: 0 10; size: 2 3" color="#AAA"></a-box>
+        <a-box class="puzzle-block" puzzle-block="position: 9 10; size: 4 3" color="#FF0"></a-box>
+        <a-box class="puzzle-block" puzzle-block="position: 0 13; size: 4 2" color="#AAA"></a-box>
+        <a-box class="puzzle-block" puzzle-block="position: 4 13; size: 5 2" color="#AAA"></a-box>
+        <a-box class="puzzle-block" puzzle-block="position: 9 13; size: 4 2" color="#FF0"></a-box>
+        <a-box class="puzzle-block" puzzle-block="position: 13 4; size: 1 11" color="#AAA"></a-box>
+    </a-scene>
+  </body>
+</html>
