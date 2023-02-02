@@ -10,7 +10,7 @@
         <a-entity movement-controls="fly: true" position="0 0 0">
             <a-entity camera position="0 0 0" look-controls></a-entity>
             <a-entity cursor="rayOrigin:mouse" raycaster="objects: .puzzle-block"></a-entity>
-            <a-entity laser-controls="hand: right" raycaster="objects: .puzzle-block"></a-entity>
+            <a-entity laser-controls="hand: right" raycaster="objects: .puzzle-block" explode-listener></a-entity>
         </a-entity>
 
       <!-- Top row -->
@@ -37,8 +37,8 @@
         <a-box class="puzzle-block" puzzle-block="position: 9 13; size: 4 2" color="#FF0"></a-box>
         <a-box class="puzzle-block" puzzle-block="position: 13 4; size: 1 11" color="#AAA"></a-box>
 
-        <a-entity text="value: Press E to scramble!; align: center;" position="0 9 -15" rotation="25 0 0" scale="15 15 15"></a-entity>
-        <a-entity text="value: Click and drag to reassemble!; align: center;" position="0 -9 -15" rotation="-25 0 0" scale="15 15 15"></a-entity>
+        <a-entity text="value: Press E or any controller button to scramble!; align: center;" position="0 9 -15" rotation="25 0 0" scale="15 15 15"></a-entity>
+        <a-entity id="instructions2" text="value: Click and drag to reassemble!; align: center;" position="0 -15 -15" rotation="-25 0 0" scale="15 15 15"></a-entity>
     </a-scene>
   </body>
 </html>
